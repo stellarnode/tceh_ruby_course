@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :pages
+
   resources :posts
   get 'welcome/index'
   get 'welcome/:id' => 'welcome#display_number'

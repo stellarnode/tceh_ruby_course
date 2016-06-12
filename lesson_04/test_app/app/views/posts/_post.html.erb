@@ -1,0 +1,9 @@
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= output = post.body.length > 40 ? (post.body[0..40] + "...") : post.body %></td>
+        <td><%= post.title_char_count %></td>
+        <td><%= post.body_char_count %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>

@@ -9,5 +9,4 @@ class Post < ActiveRecord::Base
 		self.title_char_count = title.length
 		self.body_char_count = body.length
 	end
-
 end

@@ -1,5 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  layout :select_layout
+
+  # This is a private method!
+  def select_layout
+    true ? "admin" : "application"
+  end
 
   # GET /posts
   # GET /posts.json
@@ -94,5 +100,7 @@ class PostsController < ApplicationController
       post.body_char_count = post.body.length
       return post
     end
+
+    private :select_layout
 
 end
